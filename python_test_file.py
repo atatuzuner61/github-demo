@@ -5,7 +5,7 @@ def greet(name):
     print('Hello', name)
 
 
-# Adding a syntax error now".
+Adding a syntax error now".
 
 greet('Jack')
 greet('Jill')
