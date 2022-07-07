@@ -1,0 +1,9 @@
+# Perl Critic Lint
+
+- name: Perl Critic
+      uses: Difegue/action-perlcritic@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        # Select which files or files in which directories you want to perl critic
+          args: ./*
