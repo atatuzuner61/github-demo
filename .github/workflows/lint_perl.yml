@@ -9,14 +9,20 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    name: Lint
-    steps:
-      - name: GitHub Action for Perl Critic
-        uses: Difegue/action-perlcritic@2.1.0
-        with:
-          args: ./*
+  perl-critic:
+    # runs-on: ubuntu-latest
+    stage: linting
+    image: registry.gitlab.com/pipeline-components/perl-critic:latest
+    script:
+      - perlcritic .
+  # build:
+  #   runs-on: ubuntu-latest
+  #   name: Lint
+  #   steps:
+  #     - name: GitHub Action for Perl Critic
+  #       uses: Difegue/action-perlcritic@2.1.0
+  #       with:
+  #         args: ./*
 
       # - name: perl critic
       #   uses: Difegue/action-perlcritic@master
