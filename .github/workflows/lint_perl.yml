@@ -8,13 +8,13 @@ on:
   pull_request:
     branches: [ main ]
 
-jobs:
-  perl-critic:
-    # runs-on: ubuntu-latest
-    stage: linting
-    image: registry.gitlab.com/pipeline-components/perl-critic:latest
-    script:
-      - perlcritic .
+# jobs:
+perl-critic:
+  # runs-on: ubuntu-latest
+  stage: linting
+  image: registry.gitlab.com/pipeline-components/perl-critic:latest
+  script:
+    - perlcritic .
   # build:
   #   runs-on: ubuntu-latest
   #   name: Lint
