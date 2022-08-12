@@ -1,2 +1,2 @@
 Test Git Quick Start Demo
-This change is pushed directly to main.
+Let's test the branch protection rule.
